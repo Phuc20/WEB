@@ -181,8 +181,8 @@
         <td>${item.title}</td>
         <td><img src="${item.image || ''}" alt="${item.title}"></td>
         <td>
-          <button class="qty-btn" onclick="updateQuantity(${index}, -1)">−</button>
-          ${qty}
+          <button class="qty-btn" onclick="updateQuantity(${index}, -1)">-</button>
+          <span style="margin: 0 8px;">${qty}</span>
           <button class="qty-btn" onclick="updateQuantity(${index}, 1)">+</button>
         </td>
         <td>${item.price}</td>
