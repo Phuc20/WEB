@@ -190,6 +190,33 @@
       margin-right: 5px;
     }
 
+    .demo-account {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .demo-btn {
+      background: #6c757d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .demo-btn:hover {
+      background: #5a6268;
+    }
+
+    .demo-btn i {
+      font-size: 1.2em;
+    }
+
     /* Media Queries */
     @media (max-width: 480px) {
       .social-login {
