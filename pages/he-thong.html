@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Cửa Hàng</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <style>
+        .system-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .system-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .store-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .store-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .store-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .store-content {
+            padding: 20px;
+        }
+
+        .store-name {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .store-info {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .store-contact {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .store-contact i {
+            margin-right: 8px;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../main.html">
+                    <img src="../anvat/Logo_vku-01.jpg" alt="Logo Đồ ăn vặt">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="../main.html" class="nav-link">Trang chủ</a>
+                <div class="nav-products">
+                    <span class="nav-link nav-products-title">Sản phẩm <i class="fas fa-chevron-down"></i></span>
+                    <div class="nav-products-dropdown">
+                        <a href="../main.html#banh-trang-tac">Bánh tráng tắc</a>
+                        <a href="../main.html#banh-trang-bo">Bánh tráng bơ</a>
+                        <a href="../main.html#banh-trang-xi-ke">Bánh tráng xì ke</a>
+                        <a href="../main.html#com-chay">Cơm cháy</a>
+                        <a href="../main.html#com-chay-khoquet">Cơm cháy kho quẹt</a>
+                        <a href="../main.html#com-chay-mohanh">Cơm cháy mỡ hành</a>
+                        <a href="../main.html#keo">Kẹo trái cây</a>
+                        <a href="../main.html#keo-chupa">Kẹo Chupa chups</a>
+                        <a href="../main.html#moc-khoa">Móc khóa lá cờ</a>
+                    </div>
+                </div>
+                <a href="../about.html" class="nav-link">Giới thiệu</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../Cart.html" class="cart-btn" title="Giỏ hàng">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="../login.html" class="login-btn">Đăng Nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>Hệ Thống Cửa Hàng</h1>
+        <p>Các chi nhánh của Đồ Ăn Vặt Ngon trên toàn quốc</p>
+    </section>
+
+    <main class="system-container">
+        <h2 class="system-title">CÁC CHI NHÁNH CỬA HÀNG</h2>
+        
+        <div class="store-grid">
+            <div class="store-item">
+                <img src="../anvat/store1.jpg" alt="Chi nhánh Đà Nẵng" class="store-img">
+                <div class="store-content">
+                    <h3 class="store-name">Chi nhánh Đà Nẵng</h3>
+                    <div class="store-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 470 Trần Đại Nghĩa, Ngũ Hành Sơn, Đà Nẵng</p>
+                        <div class="store-contact">
+                            <p><i class="fas fa-phone"></i> 0819056277</p>
+                            <p><i class="fas fa-clock"></i> 8:00 - 22:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-item">
+                <img src="../anvat/store2.jpg" alt="Chi nhánh Hà Nội" class="store-img">
+                <div class="store-content">
+                    <h3 class="store-name">Chi nhánh Hà Nội</h3>
+                    <div class="store-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Cầu Giấy, Hà Nội</p>
+                        <div class="store-contact">
+                            <p><i class="fas fa-phone"></i> 0819056278</p>
+                            <p><i class="fas fa-clock"></i> 8:00 - 22:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-item">
+                <img src="../anvat/store3.jpg" alt="Chi nhánh TP.HCM" class="store-img">
+                <div class="store-content">
+                    <h3 class="store-name">Chi nhánh TP.HCM</h3>
+                    <div class="store-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 456 Lê Văn Việt, Quận 9, TP.HCM</p>
+                        <div class="store-contact">
+                            <p><i class="fas fa-phone"></i> 0819056279</p>
+                            <p><i class="fas fa-clock"></i> 8:00 - 22:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../anvat/ecofood-logo-template.png" alt="Logo Đồ ăn vặt">
+                <div class="hotline">Hotline: 0819056277</div>
+                <div class="hotline-label">GIAO HÀNG NHANH</div>
+                <p>Cửa hàng Đồ Ăn Vặt Ngon</p>
+                <p>Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng</p>
+                <p>SĐT: +84 ***************</p>
+                <p>MST: 01041115527</p>
+                <p>Ngày thành lập: 01/04/2025</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Giới Thiệu</h3>
+                <a href="he-thong.html">Hệ thống cửa hàng</a><br>
+                <a href="cau-chuyen.html">Câu chuyện thương hiệu</a><br>
+                <a href="uu-dai.html">Ưu đãi thành viên</a><br>
+                <a href="tin-tuc.html">Tin tức & sự kiện</a><br>
+                <a href="tuyen-dung.html">Tuyển dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <a href="huong-dan-mua.html">Hướng dẫn mua hàng</a><br>
+                <a href="chinh-sach-giao.html">Chính sách giao hàng</a><br>
+                <a href="chinh-sach-baomat.html">Chính sách bảo mật</a><br>
+                <a href="dieu-khoan.html">Điều khoản và điều kiện</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Kết Với Chúng Tôi</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">🟦</a>
+                    <a href="https://instagram.com" target="_blank">📷</a>
+                    <a href="https://youtube.com" target="_blank">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
