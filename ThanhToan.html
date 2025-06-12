@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nạp tiền qua QR Code | Dịch vụ thanh toán</title>
+  <link rel="stylesheet" href="./styles/ThanhToan.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1><i class="fas fa-qrcode"></i> Nạp tiền qua QR Code</h1>
+    </div>
+
+    <div class="card-body">
+      <div class="qr-section">
+        <div class="qr-title">Quét mã để nạp tiền nhanh chóng</div>
+        <div class="qr-code">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://example.com/nap-tien&color=4361ee" alt="QR Code Nạp Tiền">
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="section-title">
+          <i class="fas fa-university"></i> Thông tin chuyển khoản
+        </div>
+
+        <div class="info-grid">
+          <div class="info-label">Ngân hàng:</div>
+          <div class="info-value">Vietcombank</div>
+
+          <div class="info-label">Số tài khoản:</div>
+          <div class="info-value">1234 5678 9012 3456</div>
+
+          <div class="info-label">Chủ tài khoản:</div>
+          <div class="info-value">SHOP_ANVAT_ECO</div>
+
+          <div class="info-label">Chi nhánh:</div>
+          <div class="info-value">Đà Nẵng</div>
+        </div>
+
+        <div class="note-box">
+          <p><strong>Lưu ý:</strong> Vui lòng ghi nội dung <strong>THANHTOAN-MADONHANG</strong> để hệ thống tự động xử lý giao dịch của bạn.</p>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <div class="section-title">
+          <i class="fas fa-info-circle"></i> Hướng dẫn nạp tiền
+          <span class="badge">6 bước</span>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-title">Mở ứng dụng ngân hàng</div>
+            <div class="step-desc">Mở ứng dụng ngân hàng đã liên kết trên điện thoại của bạn</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">Chọn tính năng quét mã QR</div>
+            <div class="step-desc">Tìm và chọn chức năng "Quét mã QR" trong ứng dụng</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">Quét mã QR hoặc nhập thủ công</div>
+            <div class="step-desc">Quét mã QR ở trên hoặc nhập thông tin chuyển khoản theo hướng dẫn</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">Nhập số tiền cần nạp</div>
+            <div class="step-desc">Nhập số tiền bạn muốn nạp vào tài khoản</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">Kiểm tra và xác nhận</div>
+            <div class="step-desc">Kiểm tra kỹ thông tin trước khi xác nhận giao dịch</div>
+          </div>
+
+          <div class="step">
+            <div class="step-title">Hoàn tất giao dịch</div>
+            <div class="step-desc">Tiền sẽ được cập nhật tự động trong vòng 1-5 phút</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn" onclick="alert('Vui lòng mở ứng dụng ngân hàng và quét mã QR ở trên để nạp tiền.\n\nNếu có thắc mắc, vui lòng liên hệ tổng đài hỗ trợ 1900 1234')">
+        <i class="fas fa-question-circle"></i> Cần trợ giúp?
+      </button>
+    </div>
+  </div>
+
+  <div class="support">
+    <p>Mọi thắc mắc vui lòng liên hệ <a href="tel:19001234"><i class="fas fa-phone-alt"></i> 1900 1234</a> (24/7) hoặc <a href="mailto:cskhanvateco@gmail.com"><i class="fas fa-envelope"></i> cskhanvateco@gmail.com</a></p>
+    <p><i class="fas fa-lock"></i> Giao dịch an toàn & bảo mật</p>
+  </div>
+</div>
+</body>
+</html>

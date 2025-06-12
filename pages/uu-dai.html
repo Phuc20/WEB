@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ưu Đãi Thành Viên | Đồ Ăn Vặt</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <style>
+        .benefits-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .membership-tiers {
+            margin-bottom: 60px;
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .tier-card {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tier-header {
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tier-header.silver { background: linear-gradient(135deg, #757F9A, #D7DDE8); }
+        .tier-header.gold { background: linear-gradient(135deg, #FFD700, #FFA500); }
+        .tier-header.diamond { background: linear-gradient(135deg, #43CEA2, #185A9D); }
+
+        .tier-header i {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .tier-header h2 {
+            color: white;
+            margin: 10px 0;
+            font-size: 1.5em;
+        }
+
+        .tier-header p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .tier-benefits ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .tier-benefits li {
+            padding: 10px 0;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tier-benefits i {
+            color: #4CAF50;
+        }
+
+        .how-it-works {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .step i {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .step h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .membership-tiers {
+                grid-template-columns: 1fr;
+            }
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../main.html">
+                    <img src="../anvat/ecofood-logo-template.png" alt="Logo Đồ ăn vặt">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="../main.html" class="nav-link">Trang chủ</a>
+                <div class="nav-products">
+                    <span class="nav-link nav-products-title">Sản phẩm <i class="fas fa-chevron-down"></i></span>
+                    <div class="nav-products-dropdown">
+                        <a href="../main.html#banh-trang-tac">Bánh tráng tắc</a>
+                        <a href="../main.html#banh-trang-bo">Bánh tráng bơ</a>
+                        <a href="../main.html#banh-trang-xi-ke">Bánh tráng xì ke</a>
+                        <a href="../main.html#com-chay">Cơm cháy</a>
+                        <a href="../main.html#com-chay-khoquet">Cơm cháy kho quẹt</a>
+                        <a href="../main.html#com-chay-mohanh">Cơm cháy mỡ hành</a>
+                        <a href="../main.html#keo">Kẹo trái cây</a>
+                        <a href="../main.html#keo-chupa">Kẹo Chupa chups</a>
+                    </div>
+                </div>
+                <a href="../about.html" class="nav-link">Giới thiệu</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../Cart.html" class="cart-btn" title="Giỏ hàng">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="../login.html" class="login-btn">Đăng Nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>Ưu Đãi Thành Viên</h1>
+        <p>Tích điểm - Nhận quà - Ưu đãi độc quyền</p>
+    </section>
+
+    <main class="benefits-container">
+        <div class="membership-tiers">
+            <div class="tier-card">
+                <div class="tier-header silver">
+                    <i class="fas fa-award"></i>
+                    <h2>Thành Viên Bạc</h2>
+                    <p>0 - 500.000 VNĐ</p>
+                </div>
+                <div class="tier-benefits">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Tích điểm 5%</li>
+                        <li><i class="fas fa-check"></i> Giảm 5% mỗi đơn hàng</li>
+                        <li><i class="fas fa-check"></i> Quà sinh nhật</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tier-card">
+                <div class="tier-header gold">
+                    <i class="fas fa-crown"></i>
+                    <h2>Thành Viên Vàng</h2>
+                    <p>500.000 - 2.000.000 VNĐ</p>
+                </div>
+                <div class="tier-benefits">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Tích điểm 7%</li>
+                        <li><i class="fas fa-check"></i> Giảm 10% mỗi đơn hàng</li>
+                        <li><i class="fas fa-check"></i> Quà sinh nhật đặc biệt</li>
+                        <li><i class="fas fa-check"></i> Ưu tiên đặt hàng</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tier-card">
+                <div class="tier-header diamond">
+                    <i class="fas fa-gem"></i>
+                    <h2>Thành Viên Kim Cương</h2>
+                    <p>Trên 2.000.000 VNĐ</p>
+                </div>
+                <div class="tier-benefits">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Tích điểm 10%</li>
+                        <li><i class="fas fa-check"></i> Giảm 15% mỗi đơn hàng</li>
+                        <li><i class="fas fa-check"></i> Quà VIP sinh nhật</li>
+                        <li><i class="fas fa-check"></i> Ưu tiên đặt hàng</li>
+                        <li><i class="fas fa-check"></i> Miễn phí giao hàng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="how-it-works">
+            <h2>Cách Thức Hoạt Động</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Đăng Ký</h3>
+                    <p>Tạo tài khoản thành viên miễn phí</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Mua Sắm</h3>
+                    <p>Tích lũy điểm qua mỗi đơn hàng</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-gift"></i>
+                    <h3>Nhận Ưu Đãi</h3>
+                    <p>Đổi điểm lấy quà và nhận ưu đãi</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- ...existing footer code... -->
+    </footer>
+</body>
+</html>

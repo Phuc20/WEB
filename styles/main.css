@@ -202,10 +202,70 @@ body {
   margin: 10px auto;
 }
 
+.menu-filters {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;
+    background: transparent;
+    color: #4CAF50;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 40px 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .menu-item {
@@ -217,17 +277,18 @@ body {
 }
 
 .menu-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .menu-item-img {
   height: 200px;
   background-size: cover;
   background-position: center;
-  img{
-    width: 425px;
-    height: 200px;
-  }
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover .menu-item-img {
+  transform: scale(1.05);
 }
 
 .menu-item-content {
@@ -424,6 +485,124 @@ footer {
   width: 100px;
 }
 
+.combo-section {
+    padding: 60px 20px;
+    background: #f8f9fa;
+    margin-top: 40px;
+}
+
+.section-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #4CAF50;
+    margin: 15px auto;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.combo-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.combo-item:hover {
+    transform: translateY(-5px);
+}
+
+.combo-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.combo-content {
+    padding: 20px;
+    position: relative;
+}
+
+.combo-tag {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.combo-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.combo-list li {
+    padding: 5px 0;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.combo-list li::before {
+    content: '✓';
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.combo-price {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+
+.discount-price {
+    color: #e74c3c;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.combo-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.combo-btn:hover {
+    background: #45a049;
+}
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -449,6 +628,30 @@ footer {
   .slider {
     height: 300px;
   }
+
+  .filter-buttons {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .combo-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .combo-item {
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 480px) {

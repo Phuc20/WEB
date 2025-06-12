@@ -47,27 +47,53 @@
   </div>
 </header>
 
-<h1>Giỏ hàng của bạn</h1>
+<main class="cart-container">
+    <h1 class="cart-title">Giỏ hàng của bạn</h1>
 
-<table id="cartTable" style="display:none;">
-  <thead>
-  <tr>
-    <th>Sản phẩm</th>
-    <th>Hình ảnh</th>
-    <th>Số lượng</th>
-    <th>Giá</th>
-    <th>Thành tiền</th>
-    <th>Xóa</th>
-  </tr>
-  </thead>
-  <tbody id="cartItems"></tbody>
-</table>
+    <div class="cart-wrapper">
+        <div id="cartContent" class="cart-content">
+            <table id="cartTable" class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Thành tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems"></tbody>
+            </table>
 
-<div id="emptyCartMsg" class="empty-cart">Giỏ hàng của bạn đang trống.</div>
+            <div id="emptyCartMsg" class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Giỏ hàng của bạn đang trống</p>
+                <a href="main.html" class="continue-shopping">Tiếp tục mua sắm</a>
+            </div>
+        </div>
 
-<div class="cart-total" id="cartTotal"></div>
-
-<button id="checkoutBtn" style="display:none;">Đặt hàng</button>
+        <div class="cart-summary" id="cartSummary">
+            <h2>Tổng đơn hàng</h2>
+            <div class="summary-item">
+                <span>Tạm tính:</span>
+                <span id="subtotal">0 VNĐ</span>
+            </div>
+            <div class="summary-item">
+                <span>Phí vận chuyển:</span>
+                <span id="shipping">15.000 VNĐ</span>
+            </div>
+            <div class="summary-total">
+                <span>Tổng cộng:</span>
+                <span id="cartTotal">0 VNĐ</span>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">
+                <i class="fas fa-shopping-bag"></i>
+                Đặt hàng
+            </button>
+        </div>
+    </div>
+</main>
 
 <footer>
   <div class="footer-container">
