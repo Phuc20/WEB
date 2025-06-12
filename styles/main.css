@@ -263,28 +263,97 @@ body {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-  }
-
-  .logo {
-    margin-bottom: 10px; /* Fixed the 100% typo from earlier */
-  }
-
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .banner h1 {
-    font-size: 2rem;
-  }
-
-  .header-right {
-    margin-top: 10px;
-  }
+.slider {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
 }
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 25%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CSS for manual slide navigation */
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.manual-btn:hover {
+  background: #fff;
+}
+
+/* CSS for automatic navigation */
+.navigation-auto {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navigation-auto div {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+input[name="radio-btn"] {
+  display: none;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+/* CSS for active navigation button */
+#radio1:checked ~ .navigation-auto .auto-btn1,
+#radio2:checked ~ .navigation-auto .auto-btn2,
+#radio3:checked ~ .navigation-auto .auto-btn3,
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #fff;
+}
+
 /* Footer Styles */
 footer {
   background-color: #F28C38; /* Orange background */
@@ -354,20 +423,48 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .footer-container {
+  .header-container {
     flex-direction: column;
-    text-align: center;
   }
 
-  .social-icons {
+  .logo {
+    margin-bottom: 10px; /* Fixed the 100% typo from earlier */
+  }
+
+  .nav {
+    flex-wrap: wrap;
     justify-content: center;
   }
 
-  .certification {
-    display: flex;
-    justify-content: center;
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+
+  .slider {
+    height: 300px;
   }
 }
+
+@media (max-width: 480px) {
+  .slider {
+    height: 200px;
+  }
+  
+  .navigation-manual,
+  .navigation-auto {
+    gap: 10px;
+  }
+  
+  .manual-btn,
+  .navigation-auto div {
+    padding: 3px;
+  }
+}
+
 .modal {
   display: none;
   position: fixed;

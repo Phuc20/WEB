@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu Chuyện Thương Hiệu</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <style>
+        .story-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .story-section {
+            margin-bottom: 60px;
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .story-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .story-text {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .story-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .value-icon {
+            font-size: 2.5em;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .value-title {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .story-content {
+                grid-template-columns: 1fr;
+            }
+            .story-values {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../main.html">
+                    <img src="../anvat/Logo_vku-01.jpg" alt="Logo Đồ ăn vặt">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="../main.html" class="nav-link">Trang chủ</a>
+                <div class="nav-products">
+                    <span class="nav-link nav-products-title">Sản phẩm <i class="fas fa-chevron-down"></i></span>
+                    <div class="nav-products-dropdown">
+                        <a href="../main.html#banh-trang-tac">Bánh tráng tắc</a>
+                        <a href="../main.html#banh-trang-bo">Bánh tráng bơ</a>
+                        <a href="../main.html#banh-trang-xi-ke">Bánh tráng xì ke</a>
+                        <a href="../main.html#com-chay">Cơm cháy</a>
+                        <a href="../main.html#com-chay-khoquet">Cơm cháy kho quẹt</a>
+                        <a href="../main.html#com-chay-mohanh">Cơm cháy mỡ hành</a>
+                        <a href="../main.html#keo">Kẹo trái cây</a>
+                        <a href="../main.html#keo-chupa">Kẹo Chupa chups</a>
+                    </div>
+                </div>
+                <a href="../about.html" class="nav-link">Giới thiệu</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../Cart.html" class="cart-btn" title="Giỏ hàng">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="../login.html" class="login-btn">Đăng Nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>Câu Chuyện Thương Hiệu</h1>
+        <p>Hành trình phát triển và những giá trị cốt lõi</p>
+    </section>
+
+    <main class="story-container">
+        <section class="story-section">
+            <h2 class="story-title">HÀNH TRÌNH PHÁT TRIỂN</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Đồ Ăn Vặt Ngon ra đời vào năm 2025, bắt đầu từ một cửa hàng nhỏ tại Đà Nẵng. Với mong muốn mang đến cho khách hàng những món ăn vặt chất lượng, an toàn và giá cả phải chăng, chúng tôi đã không ngừng phát triển và mở rộng hệ thống.</p>
+                    <p>Qua nhiều năm hoạt động, chúng tôi đã xây dựng được niềm tin từ khách hàng bằng sự tận tâm trong phục vụ và chất lượng sản phẩm luôn được đảm bảo. Mỗi món ăn của chúng tôi đều được chế biến từ những nguyên liệu tươi ngon nhất, đảm bảo vệ sinh an toàn thực phẩm.</p>
+                </div>
+                <img src="../anvat/store1.jpg" alt="Cửa hàng đầu tiên" class="story-image">
+            </div>
+        </section>
+
+        <section class="story-section">
+            <h2 class="story-title">GIÁ TRỊ CỐT LÕI</h2>
+            <div class="story-values">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="value-title">Tận Tâm</h3>
+                    <p>Luôn đặt sự hài lòng của khách hàng lên hàng đầu</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="value-title">Chất Lượng</h3>
+                    <p>Cam kết chất lượng sản phẩm và dịch vụ tốt nhất</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="value-title">Uy Tín</h3>
+                    <p>Xây dựng thương hiệu dựa trên sự tin cậy</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../anvat/ecofood-logo-template.png" alt="Logo Đồ ăn vặt">
+                <div class="hotline">Hotline: 0819056277</div>
+                <div class="hotline-label">GIAO HÀNG NHANH</div>
+                <p>Cửa hàng Đồ Ăn Vặt Ngon</p>
+                <p>Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng</p>
+                <p>SĐT: +84 ***************</p>
+                <p>MST: 01041115527</p>
+                <p>Ngày thành lập: 01/04/2025</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Giới Thiệu</h3>
+                <a href="he-thong.html">Hệ thống cửa hàng</a><br>
+                <a href="cau-chuyen.html">Câu chuyện thương hiệu</a><br>
+                <a href="uu-dai.html">Ưu đãi thành viên</a><br>
+                <a href="tin-tuc.html">Tin tức & sự kiện</a><br>
+                <a href="tuyen-dung.html">Tuyển dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <a href="huong-dan-mua.html">Hướng dẫn mua hàng</a><br>
+                <a href="chinh-sach-giao.html">Chính sách giao hàng</a><br>
+                <a href="chinh-sach-baomat.html">Chính sách bảo mật</a><br>
+                <a href="dieu-khoan.html">Điều khoản và điều kiện</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Kết Với Chúng Tôi</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">🟦</a>
+                    <a href="https://instagram.com" target="_blank">📷</a>
+                    <a href="https://youtube.com" target="_blank">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
