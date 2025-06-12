@@ -52,7 +52,20 @@
 </section>
 
 <main class="menu-container">
-  <h2 class="menu-title">THỰC ĐƠN CỦA CHÚNG TÔI</h2>
+  <div class="menu-filters">
+    <h2 class="menu-title">THỰC ĐƠN CỦA CHÚNG TÔI</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">Tất cả</button>
+      <button class="filter-btn" data-category="banh-trang">Bánh Tráng</button>
+      <button class="filter-btn" data-category="com-chay">Cơm Cháy</button>
+      <button class="filter-btn" data-category="keo">Kẹo</button>
+      <button class="filter-btn" data-category="other">Khác</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchProducts" placeholder="Tìm kiếm sản phẩm...">
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
   <div class="menu-grid">
     <div class="menu-item" id="banh-trang-tac">
       <div class="menu-item-img" style="background-image: url('../anvat/hinh-anh-3.webp');"></div>
@@ -136,6 +149,65 @@
     </div>
   </div>
 </main>
+
+<section class="combo-section">
+  <h2 class="section-title">COMBO ƯU ĐÃI</h2>
+  <div class="combo-grid">
+    <div class="combo-item">
+      <div class="combo-img" style="background-image: url('./anvat/combo1.jpg');"></div>
+      <div class="combo-content">
+        <span class="combo-tag">Tiết kiệm 15%</span>
+        <h3>Combo Bánh Tráng</h3>
+        <ul class="combo-list">
+          <li>2x Bánh tráng tắc</li>
+          <li>2x Bánh tráng bơ</li>
+          <li>1x Bánh tráng xì ke</li>
+        </ul>
+        <div class="combo-price">
+          <span class="original-price">75.000 VNĐ</span>
+          <span class="discount-price">65.000 VNĐ</span>
+        </div>
+        <button class="combo-btn">Đặt combo</button>
+      </div>
+    </div>
+
+    <div class="combo-item">
+      <div class="combo-img" style="background-image: url('./anvat/combo2.jpg');"></div>
+      <div class="combo-content">
+        <span class="combo-tag">Tiết kiệm 20%</span>
+        <h3>Combo Cơm Cháy</h3>
+        <ul class="combo-list">
+          <li>2x Cơm cháy kho quẹt</li>
+          <li>2x Cơm cháy mỡ hành</li>
+          <li>1x Cơm cháy</li>
+        </ul>
+        <div class="combo-price">
+          <span class="original-price">100.000 VNĐ</span>
+          <span class="discount-price">80.000 VNĐ</span>
+        </div>
+        <button class="combo-btn">Đặt combo</button>
+      </div>
+    </div>
+
+    <div class="combo-item">
+      <div class="combo-img" style="background-image: url('./anvat/combo3.jpg');"></div>
+      <div class="combo-content">
+        <span class="combo-tag">Tiết kiệm 25%</span>
+        <h3>Combo Party</h3>
+        <ul class="combo-list">
+          <li>3x Bánh tráng tắc</li>
+          <li>3x Cơm cháy mỡ hành</li>
+          <li>2x Kẹo Chupa chups</li>
+        </ul>
+        <div class="combo-price">
+          <span class="original-price">150.000 VNĐ</span>
+          <span class="discount-price">115.000 VNĐ</span>
+        </div>
+        <button class="combo-btn">Đặt combo</button>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Footer Section -->
 <footer>
   <div class="footer-container">
@@ -298,9 +370,84 @@
       }
     }
   });
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('searchProducts');
+  const menuGrid = document.querySelector('.menu-grid');
+
+  // Filter functionality
+  filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          const category = btn.dataset.category;
+          filterProducts(category, searchInput.value);
+      });
+  });
+
+  // Search functionality
+  searchInput.addEventListener('input', (e) => {
+      const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+      filterProducts(activeCategory, e.target.value);
+  });
+
+  function filterProducts(category, searchText) {
+      menuGrid.style.opacity = '0';
+      
+      setTimeout(() => {
+          menuItems.forEach(item => {
+              const title = item.querySelector('.menu-item-title').textContent.toLowerCase();
+              const matchesSearch = title.includes(searchText.toLowerCase());
+              const matchesCategory = category === 'all' || item.id.includes(category);
+              
+              item.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+          });
+          
+          menuGrid.style.opacity = '1';
+      }, 300);
+  }
+
+  // Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+              targetElement.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center'
+              });
+          }
+      });
+  });
+
+  // Combo functionality
+  document.querySelectorAll('.combo-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const comboItem = this.closest('.combo-item');
+        const title = comboItem.querySelector('h3').innerText;
+        const price = comboItem.querySelector('.discount-price').innerText;
+        const image = comboItem.querySelector('.combo-img').style.backgroundImage
+            .replace('url("', '').replace('")', '');
+        
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({
+            title: `${title} (Combo)`,
+            price,
+            quantity: 1,
+            image
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`Đã thêm "${title}" vào giỏ hàng!`);
+    });
+});
+
+
 </script>
-
-
-
 </body>
 </html>
