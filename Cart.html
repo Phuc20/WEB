@@ -4,94 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Giỏ hàng - Đồ Ăn Vặt</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 15px;
-      background-color: #f9f9f9;
-      color: #292f36;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #ef4b3c;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-    th, td {
-      padding: 12px 15px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-    th {
-      background-color: #ef4b3c;
-      color: white;
-      font-weight: 600;
-    }
-    tr:last-child td {
-      border-bottom: none;
-    }
-    img {
-      max-width: 80px;
-      border-radius: 8px;
-    }
-    button {
-      cursor: pointer;
-      background-color: #ef4b3c;
-      border: none;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #d43b2c;
-    }
-    .qty-btn {
-      padding: 3px 10px;
-      font-weight: bold;
-    }
-    .cart-total {
-      margin-top: 15px;
-      text-align: right;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #d32f2f;
-    }
-    #checkoutBtn {
-      display: block;
-      margin: 30px auto;
-      background-color: #4ecdc4;
-      color: white;
-      font-size: 1.3rem;
-      padding: 12px 40px;
-      border-radius: 8px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    #checkoutBtn:hover {
-      background-color: #38b2ac;
-    }
-    .empty-cart {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-top: 50px;
-      color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
 </head>
 <body>
+
+<header class="header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="main.html">
+        <img src="./anvat/ecofood-logo-template.png" alt="Logo Đồ ăn vặt">
+      </a>
+    </div>
+    <!-- Danh mục -->
+    <nav class="nav">
+      <a href="main.html" class="nav-link">Trang chủ</a>
+      <div class="nav-products">
+        <span class="nav-link nav-products-title">Sản phẩm <i class="fas fa-chevron-down"></i></span>
+        <div class="nav-products-dropdown">
+          <a href="main.html#banh-trang-tac">Bánh tráng tắc</a>
+          <a href="main.html#banh-trang-bo">Bánh tráng bơ</a>
+          <a href="main.html#banh-trang-xi-ke">Bánh tráng xì ke</a>
+          <a href="main.html#com-chay">Cơm cháy</a>
+          <a href="main.html#com-chay-khoquet">Cơm cháy kho quẹt</a>
+          <a href="main.html#com-chay-mohanh">Cơm cháy mỡ hành</a>
+          <a href="main.html#keo">Kẹo trái cây</a>
+          <a href="main.html#keo-chupa">Kẹo Chupa chups</a>
+          <a href="main.html#moc-khoa">Móc khóa lá cờ</a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">Giới thiệu</a>
+    </nav>
+    <!-- Icon giỏ hàng & đăng nhập -->
+    <div class="header-actions">
+      <a href="Cart.html" class="cart-btn" title="Giỏ hàng">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="login.html" class="login-btn">Đăng Nhập</a>
+    </div>
+  </div>
+</header>
 
 <h1>Giỏ hàng của bạn</h1>
 
@@ -114,6 +68,50 @@
 <div class="cart-total" id="cartTotal"></div>
 
 <button id="checkoutBtn" style="display:none;">Đặt hàng</button>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="./anvat/ecofood-logo-template.png" alt="Logo Đồ ăn vặt">
+      <div class="hotline">Hotline: 0819056277</div>
+      <div class="hotline-label">GIAO HÀNG NHANH</div>
+      <p>Cửa hàng Đồ Ăn Vặt Ngon</p>
+      <p>Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng</p>
+      <p>SĐT: +84 ***************</p>
+      <p>MST: 01041115527</p>
+      <p>Ngày thành lập: 01/04/2025</p>
+    </div>
+    <div class="footer-section">
+      <h3>Giới Thiệu</h3>
+      <p>Hệ thống cửa hàng</p>
+      <p>Câu chuyện thương hiệu</p>
+      <p>Ưu đãi thành viên</p>
+      <p>Tin tức & sự kiện</p>
+      <p>Tuyển dụng</p>
+    </div>
+    <div class="footer-section">
+      <h3>Liên Hệ</h3>
+      <a href="#">Hướng dẫn mua hàng</a><br>
+      <a href="#">Chính sách giao hàng</a><br>
+      <a href="#">Chính sách bảo mật</a><br>
+      <a href="#">Điều khoản và điều kiện</a>
+    </div>
+    <div class="footer-section">
+      <h3>Liên Kết Với Chúng Tôi</h3>
+      <div class="social-icons">
+        <a href="#"><img src="./anvat/facebook.png" style="width:32px; height:32px; object-fit:contain;" alt="Facebook" /></a>
+        <a href="#"><img src="./anvat/tiktok.png" style="width:32px; height:32px; object-fit:contain;" alt="Tiktok" /></a>
+        <a href="#"><img src="./anvat/instagram.png" style="width:32px; height:32px; object-fit:contain;" alt="Instagram" /></a>
+      </div>
+      <div class="certification">
+        <img src="./anvat/bocongthuong.png" alt="Đã thông báo Bộ Công Thương">
+      </div>
+      <h3>Tổng Đài Hỗ Trợ</h3>
+      <p>Đặt hàng: 0819056277 (9:30 – 21:30)</p>
+      <p>Tổng đài CSKH: 18001056 (9:30 – 21:30)</p>
+    </div>
+  </div>
+</footer>
 
 <script>
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
