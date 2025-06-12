@@ -6,6 +6,9 @@
   <title>WEB BÁN ĐỒ ĂN VẶT</title>
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+
 </head>
 <body>
 <header class="header">
@@ -34,7 +37,6 @@
         </div>
       </div>
       <a href="about.html" class="nav-link">Giới thiệu</a>
-      <a href="LienHe.html" class="nav-link">Liên hệ</a>
     </nav>
     <!-- Icon giỏ hàng & đăng nhập -->
     <div class="header-actions">
@@ -42,6 +44,11 @@
         <i class="fas fa-shopping-cart"></i>
       </a>
       <a href="login.html" class="login-btn">Đăng Nhập</a>
+
+      <a href="ThanhToan.html" class="thanhtoan-btn" title="Thanh Toán ">
+        <i class="fa-regular fa-credit-card fa-xl" style="color: #000000;"></i>
+      </a>
+
     </div>
   </div>
 </header>
@@ -53,10 +60,23 @@
 </section>
 
 <main class="menu-container">
-  <h2 class="menu-title">THỰC ĐƠN CỦA CHÚNG TÔI</h2>
+  <div class="menu-filters">
+    <h2 class="menu-title">THỰC ĐƠN CỦA CHÚNG TÔI</h2>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-category="all">Tất cả</button>
+      <button class="filter-btn" data-category="banh-trang">Bánh Tráng</button>
+      <button class="filter-btn" data-category="com-chay">Cơm Cháy</button>
+      <button class="filter-btn" data-category="keo">Kẹo</button>
+      <button class="filter-btn" data-category="other">Khác</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchProducts" placeholder="Tìm kiếm sản phẩm...">
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
   <div class="menu-grid">
     <div class="menu-item" id="banh-trang-tac">
-      <div class="menu-item-img" style="background-image: url('../anvat/hinh-anh-3.webp');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/banhtrangtac.jpg');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Bánh tráng tắc</h3>
         <div class="menu-item-price">10.000 VNĐ</div>
@@ -65,7 +85,7 @@
     </div>
 
     <div class="menu-item" id="banh-trang-bo">
-      <div class="menu-item-img" style="background-image: url('../anvat/sg-11134201-22100-ofy6ke1793iv91.jpg');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/banhtrangbo.webp');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Bánh tráng bơ</h3>
         <div class="menu-item-price">10.000 VNĐ</div>
@@ -74,7 +94,7 @@
     </div>
 
     <div class="menu-item" id="banh-trang-xi-ke">
-      <div class="menu-item-img" style="background-image: url('../anvat/img_8404.jpeg');"></div>
+      <div class="menu-item-img" style="background-image: url('anvat/img_8404.jpeg');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Bánh tráng xì ke</h3>
         <div class="menu-item-price">10.000 VNĐ</div>
@@ -83,7 +103,7 @@
     </div>
 
     <div class="menu-item" id="com-chay">
-      <div class="menu-item-img" style="background-image: url('../anvat/z5338140523123_dba4bc52d8f5f7df0965608557cdfb99_45f56044bece480bbb749d839590975b_master.webp');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/comchay.webp');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Cơm cháy</h3>
         <div class="menu-item-price">10.000 VNĐ</div>
@@ -92,7 +112,7 @@
     </div>
 
     <div class="menu-item" id="com-chay-khoquet">
-      <div class="menu-item-img" style="background-image: url('../anvat/cach-lam-com-chay-1.jpg');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/comchaykhoquet.jpg');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Cơm cháy kho quẹt</h3>
         <div class="menu-item-price">20.000 VNĐ</div>
@@ -101,7 +121,7 @@
     </div>
 
     <div class="menu-item" id="com-chay-mohanh">
-      <div class="menu-item-img" style="background-image: url('../anvat/cach-lam-com-chay-mo-hanh-gion-rum-ai-cung-muon-an-1-540.jpg');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/comchaymohanh.jpg');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Cơm cháy mỡ hành</h3>
         <div class="menu-item-price">25.000 VNĐ</div>
@@ -110,7 +130,7 @@
     </div>
 
     <div class="menu-item" id="keo">
-      <div class="menu-item-img" style="background-image: url('../anvat/8935001718840.jpg.webp');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/keotraicay.webp');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Kẹo trái cây</h3>
         <div class="menu-item-price">10.000 VNĐ</div>
@@ -119,7 +139,7 @@
     </div>
 
     <div class="menu-item" id="keo-chupa">
-      <div class="menu-item-img" style="background-image: url('../anvat/images.jpg');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/keochupachup.jpg');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Kẹo Chupa chups</h3>
         <div class="menu-item-price">10.000 VNĐ</div>
@@ -128,7 +148,7 @@
     </div>
 
     <div class="menu-item" id="moc-khoa">
-      <div class="menu-item-img" style="background-image: url('../anvat/01691232385e5f7c7ac8762f92ea0299.jpg');"></div>
+      <div class="menu-item-img" style="background-image: url('./anvat/mockhoa.jpg');"></div>
       <div class="menu-item-content">
         <h3 class="menu-item-title">Móc khóa lá cờ</h3>
         <div class="menu-item-price">20.000 VNĐ</div>
@@ -137,12 +157,71 @@
     </div>
   </div>
 </main>
+
+<section class="combo-section">
+  <h2 class="section-title">COMBO ƯU ĐÃI</h2>
+  <div class="combo-grid">
+    <div class="combo-item">
+      <div class="combo-img" style="background-image: url('anvat/combo1.png');"></div>
+      <div class="combo-content">
+        <span class="combo-tag">Tiết kiệm 15%</span>
+        <h3>Combo Bánh Tráng</h3>
+        <ul class="combo-list">
+          <li>2x Bánh tráng tắc</li>
+          <li>2x Bánh tráng bơ</li>
+          <li>1x Bánh tráng xì ke</li>
+        </ul>
+        <div class="combo-price">
+          <span class="original-price">75.000 VNĐ</span>
+          <span class="discount-price">65.000 VNĐ</span>
+        </div>
+        <button class="combo-btn">Đặt combo</button>
+      </div>
+    </div>
+
+    <div class="combo-item">
+      <div class="combo-img" style="background-image: url('./anvat/combo2.png');"></div>
+      <div class="combo-content">
+        <span class="combo-tag">Tiết kiệm 20%</span>
+        <h3>Combo Cơm Cháy</h3>
+        <ul class="combo-list">
+          <li>2x Cơm cháy kho quẹt</li>
+          <li>2x Cơm cháy mỡ hành</li>
+          <li>1x Cơm cháy</li>
+        </ul>
+        <div class="combo-price">
+          <span class="original-price">100.000 VNĐ</span>
+          <span class="discount-price">80.000 VNĐ</span>
+        </div>
+        <button class="combo-btn">Đặt combo</button>
+      </div>
+    </div>
+
+    <div class="combo-item">
+      <div class="combo-img" style="background-image: url('./anvat/combo3.jpg');"></div>
+      <div class="combo-content">
+        <span class="combo-tag">Tiết kiệm 25%</span>
+        <h3>Combo Party</h3>
+        <ul class="combo-list">
+          <li>3x Bánh tráng tắc</li>
+          <li>3x Cơm cháy mỡ hành</li>
+          <li>2x Kẹo Chupa chups</li>
+        </ul>
+        <div class="combo-price">
+          <span class="original-price">150.000 VNĐ</span>
+          <span class="discount-price">115.000 VNĐ</span>
+        </div>
+        <button class="combo-btn">Đặt combo</button>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Footer Section -->
 <footer>
   <div class="footer-container">
     <!-- Logo and Contact Info -->
     <div class="footer-logo">
-      
+
       <div class="hotline">Hotline: 0819056277</div>
       <div class="hotline-label">GIAO HÀNG NHANH</div>
       <p>Cửa hàng Đồ Ăn Vặt Ngon</p>
@@ -156,7 +235,7 @@
     <div class="footer-section">
       <h3>Giới Thiệu</h3>
       <a href="./pages/he-thong.html">Hệ thống cửa hàng</a><br>
-      <a href="./pages/cau-chuyen.html">Câu chuyện thương hiệu</a><br> 
+      <a href="./pages/cau-chuyen.html">Câu chuyện thương hiệu</a><br>
       <a href="./pages/uu-dai.html">Ưu đãi thành viên</a><br>
       <a href="./pages/tin-tuc.html">Tin tức & sự kiện</a><br>
       <a href="./pages/tuyen-dung.html">Tuyển dụng</a>
@@ -165,27 +244,28 @@
     <!-- Liên hệ -->
     <div class="footer-section">
       <h3>Liên Hệ</h3>
-      <a href="#">Hướng dẫn mua hàng</a><br>
-      <a href="#">Chính sách giao hàng</a><br>
-      <a href="#">Chính sách bảo mật</a><br>
-      <a href="#">Điều khoản và điều kiện</a>
+      <a href="./pages/huong-dan-mua.html">Hướng dẫn mua hàng</a><br>
+      <a href="./pages/chinh-sach-giao.html">Chính sách giao hàng</a><br>
+      <a href="./pages/chinh-sach-baomat.html">Chính sách bảo mật</a><br>
+      <a href="./pages/dieu-khoan.html">Điều khoản và điều kiện</a>
     </div>
 
-    <!-- Liên Kết Với Chúng Tôi (Connect With Us) and Tổng Đài Hỗ Trợ (Support Hotline) -->
+    <!-- Liên kết và hỗ trợ -->
     <div class="footer-section">
       <h3>Liên Kết Với Chúng Tôi</h3>
       <div class="social-icons">
-        <img src="./anvat/facebook.png" style="width:32px; height:32px; object-fit:contain;" alt="Facebook" /> <!-- Placeholder for Facebook -->
-        <img src="./anvat/tiktok.png" style="width:32px; height:32px; object-fit:contain;" alt="Tiktok" /> <!-- Placeholder for Tiktok -->
-        <img src="./anvat/instagram.png" style="width:32px; height:32px; object-fit:contain;" alt="Instagram" /> <!-- Placeholder for Instagram -->
+        <a href="https://facebook.com" target="_blank">🟦</a>
+        <a href="https://instagram.com" target="_blank">📷</a>
+        <a href="https://youtube.com" target="_blank">▶️</a>
       </div>
+
       <div class="certification">
         <img src="./anvat/bocongthuong.png" style="width:100px; height:50px; object-fit:contain;" alt="Đã thông báo Bộ Công Thương">
       </div>
-      
+
       <h3>Tổng Đài Hỗ Trợ</h3>
-      <p>Đặt hàng: 0819056277 (9:30 – 21:30)</p>
-      <p>Tổng đài CSKH: 18001056 (9:30 – 21:30)</p>
+      <p>Đặt hàng: ********** (9:30 – 21:30)</p>
+      <p>Tổng đài CSKH: ********** (9:30 – 21:30)</p>
     </div>
   </div>
 </footer>
@@ -280,7 +360,7 @@
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`Đã thêm "${title}" vào giỏ hàng!`);
   });
-  
+
   // Xử lý khi vào main.html#id_san_pham từ trang khác
   window.addEventListener('DOMContentLoaded', function() {
     const hash = window.location.hash.replace('#', '');
@@ -298,9 +378,84 @@
       }
     }
   });
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const searchInput = document.getElementById('searchProducts');
+  const menuGrid = document.querySelector('.menu-grid');
+
+  // Filter functionality
+  filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+
+          const category = btn.dataset.category;
+          filterProducts(category, searchInput.value);
+      });
+  });
+
+  // Search functionality
+  searchInput.addEventListener('input', (e) => {
+      const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+      filterProducts(activeCategory, e.target.value);
+  });
+
+  function filterProducts(category, searchText) {
+      menuGrid.style.opacity = '0';
+
+      setTimeout(() => {
+          menuItems.forEach(item => {
+              const title = item.querySelector('.menu-item-title').textContent.toLowerCase();
+              const matchesSearch = title.includes(searchText.toLowerCase());
+              const matchesCategory = category === 'all' || item.id.includes(category);
+
+              item.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+          });
+
+          menuGrid.style.opacity = '1';
+      }, 300);
+  }
+
+  // Add smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+              targetElement.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center'
+              });
+          }
+      });
+  });
+
+  // Combo functionality
+  document.querySelectorAll('.combo-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const comboItem = this.closest('.combo-item');
+        const title = comboItem.querySelector('h3').innerText;
+        const price = comboItem.querySelector('.discount-price').innerText;
+        const image = comboItem.querySelector('.combo-img').style.backgroundImage
+            .replace('url("', '').replace('")', '');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({
+            title: `${title} (Combo)`,
+            price,
+            quantity: 1,
+            image
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`Đã thêm "${title}" vào giỏ hàng!`);
+    });
+});
+
+
 </script>
-
-
-
 </body>
 </html>
