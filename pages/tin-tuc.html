@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức & Sự Kiện | Đồ Ăn Vặt</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tin-tuc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="../main.html">
+                    <img src="../anvat/ecofood-logo-template.png" style="width:80px; height:80px;" alt="Logo Đồ ăn vặt">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="../main.html" class="nav-link">Trang chủ</a>
+                <div class="nav-products">
+                    <span class="nav-link nav-products-title">Sản phẩm <i class="fas fa-chevron-down"></i></span>
+                    <div class="nav-products-dropdown">
+                        <a href="../main.html#banh-trang-tac">Bánh tráng tắc</a>
+                        <a href="../main.html#banh-trang-bo">Bánh tráng bơ</a>
+                        <a href="../main.html#banh-trang-xi-ke">Bánh tráng xì ke</a>
+                        <a href="../main.html#com-chay">Cơm cháy</a>
+                        <a href="../main.html#com-chay-khoquet">Cơm cháy kho quẹt</a>
+                        <a href="../main.html#com-chay-mohanh">Cơm cháy mỡ hành</a>
+                        <a href="../main.html#keo">Kẹo trái cây</a>
+                        <a href="../main.html#keo-chupa">Kẹo Chupa chups</a>
+                        <a href="../main.html#moc-khoa">Móc khóa lá cờ</a>
+                    </div>
+                </div>
+                <a href="../about.html" class="nav-link">Giới thiệu</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../Cart.html" class="cart-btn" title="Giỏ hàng">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="../login.html" class="login-btn">Đăng Nhập</a>
+                <a href="../ThanhToan.html" class="thanhtoan-btn" title="Thanh Toán">
+                    <i class="fa-regular fa-credit-card fa-xl" style="color: #000000;"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>Tin Tức & Sự Kiện</h1>
+        <p>Cập nhật những thông tin mới nhất về đồ ăn vặt</p>
+    </section>
+
+    <main class="news-container">
+        <div class="news-filters">
+            <button class="filter-btn active" data-category="all">Tất cả</button>
+            <button class="filter-btn" data-category="news">Tin tức</button>
+            <button class="filter-btn" data-category="events">Sự kiện</button>
+            <button class="filter-btn" data-category="promotions">Khuyến mãi</button>
+        </div>
+
+        <div class="news-grid">
+            <!-- News Item 1 -->
+            <article class="news-item" data-category="events">
+                <div class="news-image">
+                    <img src="./anvat/event1.jpg" alt="Sự kiện khai trương">
+                    <span class="news-tag">Sự kiện</span>
+                </div>
+                <div class="news-content">
+                    <h3>Khai Trương Chi Nhánh Mới</h3>
+                    <div class="news-meta">
+                        <span><i class="far fa-calendar"></i> 15/06/2025</span>
+                        <span><i class="far fa-clock"></i> 09:00 - 22:00</span>
+                    </div>
+                    <p>Chào mừng khai trương chi nhánh mới tại 470 Trần Đại Nghĩa với nhiều ưu đãi hấp dẫn...</p>
+                    <a href="#" class="read-more">Xem thêm <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Add more news items as needed -->
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="page-numbers">
+                <span class="current-page">1</span> / <span class="total-pages">3</span>
+            </div>
+            <button class="page-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="hotline">Hotline: 0819056277</div>
+                <div class="hotline-label">GIAO HÀNG NHANH</div>
+                <p>Cửa hàng Đồ Ăn Vặt Ngon</p>
+                <p>Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng</p>
+                <p>SĐT: +84 ***************</p>
+                <p>MST: 01041115527</p>
+                <p>Ngày thành lập: 01/04/2025</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Giới Thiệu</h3>
+                <a href="./he-thong.html">Hệ thống cửa hàng</a><br>
+                <a href="./cau-chuyen.html">Câu chuyện thương hiệu</a><br>
+                <a href="./uu-dai.html">Ưu đãi thành viên</a><br>
+                <a href="./tin-tuc.html">Tin tức & sự kiện</a><br>
+                <a href="./tuyen-dung.html">Tuyển dụng</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Hệ</h3>
+                <a href="./huong-dan-mua.html">Hướng dẫn mua hàng</a><br>
+                <a href="./chinh-sach-giao.html">Chính sách giao hàng</a><br>
+                <a href="./chinh-sach-baomat.html">Chính sách bảo mật</a><br>
+                <a href="./dieu-khoan.html">Điều khoản và điều kiện</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liên Kết Với Chúng Tôi</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">🟦</a>
+                    <a href="https://instagram.com" target="_blank">📷</a>
+                    <a href="https://youtube.com" target="_blank">▶️</a>
+                </div>
+
+                <div class="certification">
+                    <img src="../anvat/bocongthuong.png" style="width:100px; height:50px; object-fit:contain;" alt="Đã thông báo Bộ Công Thương">
+                </div>
+
+                <h3>Tổng Đài Hỗ Trợ</h3>
+                <p>Đặt hàng: ********** (9:30 – 21:30)</p>
+                <p>Tổng đài CSKH: ********** (9:30 – 21:30)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add user authentication check
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.querySelector('.login-btn');
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+            
+            if (loggedInUser && loggedInUser.isLoggedIn) {
+                loginBtn.innerHTML = `<i class="fas fa-user"></i> ${loggedInUser.name}`;
+            }
+        });
+
+        // Add filter functionality for news
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const newsItems = document.querySelectorAll('.news-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                newsItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
