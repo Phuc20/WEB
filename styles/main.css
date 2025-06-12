@@ -287,9 +287,11 @@ body {
 }
 /* Footer Styles */
 footer {
-  background-color: #F28C38; /* Orange background */
-  color: white;
-  padding: 40px 20px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 24px;
 }
 
 .footer-container {
@@ -324,7 +326,7 @@ footer {
 
 .footer-section p, .footer-section a {
   font-size: 0.9rem;
-  color: white;
+  color: rgb(0, 0, 0);
   line-height: 1.6;
   text-decoration: none;
 }
