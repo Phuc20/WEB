@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới Thiệu - WEB BÁN ĐỒ ĂN VẶT</title>
+  <title>Liên hệ - WEB BÁN ĐỒ ĂN VẶT</title>
   <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/about.css">
+  <link rel="stylesheet" href="./styles/lienhe.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
+<!-- Header giống main.html -->
 <header class="header">
   <div class="header-container">
-    <!-- Logo -->
     <div class="logo">
       <a href="main.html">
         <img src="../anvat/ecofood-logo-template.png" style="width:80px; height:80px;" alt="Logo Đồ ăn vặt">
       </a>
     </div>
-    <!-- Danh mục -->
     <nav class="nav">
       <a href="main.html" class="nav-link">Trang chủ</a>
       <div class="nav-products">
@@ -36,61 +35,70 @@
         </div>
       </div>
       <a href="about.html" class="nav-link">Giới thiệu</a>
-      <a href="lienhe.html" class="nav-link">Liên hệ</a>
+      <a href="lienhe.html" class="nav-link active">Liên hệ</a>
     </nav>
-    <!-- Icon giỏ hàng & đăng nhập -->
     <div class="header-actions">
       <a href="Cart.html" class="cart-btn" title="Giỏ hàng">
         <i class="fas fa-shopping-cart"></i>
       </a>
       <a href="login.html" class="login-btn">Đăng Nhập</a>
-
       <a href="ThanhToan.html" class="thanhtoan-btn" title="Thanh Toán ">
         <i class="fa-regular fa-credit-card fa-xl" style="color: #000000;"></i>
       </a>
-
     </div>
   </div>
 </header>
 
-<main class="about-container">
-  <section class="about-section">
-    <h1>Giới Thiệu Về Cửa Hàng Đồ Ăn Vặt Eco Food</h1>
-    <p>
-      Chào mừng bạn đến với cửa hàng Đồ Ăn Vặt VKU! Chúng tôi tự hào là địa chỉ tin cậy mang đến cho bạn những món ăn vặt thơm ngon, chất lượng với giá cả hợp lý nhất. Được thành lập bởi các bạn sinh viên Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, cửa hàng là nơi hội tụ của đam mê ẩm thực và tinh thần sáng tạo trẻ trung.
-    </p>
-    <h2>Sứ Mệnh</h2>
-    <p>
-      Mang đến trải nghiệm ẩm thực vui vẻ, tiện lợi và an toàn cho mọi khách hàng. Chúng tôi luôn đặt chất lượng sản phẩm và sự hài lòng của bạn lên hàng đầu.
-    </p>
-    <h2>Sản Phẩm Đặc Sắc</h2>
-    <ul>
-      <li>Bánh tráng tắc, bơ, xì ke – hương vị tuổi thơ khó quên</li>
-      <li>Cơm cháy truyền thống, kho quẹt, mỡ hành – giòn rụm, đậm đà</li>
-      <li>Kẹo trái cây, Chupa chups – ngọt ngào sắc màu</li>
-      <li>Móc khóa lá cờ – nhỏ xinh, ý nghĩa</li>
-    </ul>
-    <h2>Cam Kết</h2>
-    <ul>
-      <li>Nguyên liệu tươi ngon, an toàn vệ sinh thực phẩm</li>
-      <li>Phục vụ tận tình, giao hàng nhanh chóng</li>
-      <li>Giá cả sinh viên, ưu đãi hấp dẫn</li>
-    </ul>
-    <h2>Liên Hệ</h2>
-    <p>
-      Địa chỉ: Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng<br>
-      Hotline: 0819056277<br>
-      Email: info@vkufood.vn
-    </p>
-    <p>
-      Cảm ơn bạn đã tin tưởng và ủng hộ Đồ Ăn Vặt VKU!
-    </p>
-  </section>
+<main class="contact-main">
+  <h1 class="contact-title">Liên hệ</h1>
+  <div class="contact-container">
+    <!-- Thông tin liên hệ -->
+    <div class="contact-info">
+      <div class="contact-info-header">Thông tin liên hệ</div>
+      <div class="contact-info-block">
+        <div class="contact-info-row">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <div class="contact-info-label">Hotline tư vấn 24/24</div>
+            <div class="contact-info-value">1800 1056</div>
+          </div>
+        </div>
+        <div class="contact-info-row">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">ecofoodngon@gmail.com</div>
+          </div>
+        </div>
+        <hr>
+        <div class="contact-info-row">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <div class="contact-info-label">Địa chỉ</div>
+            <div class="contact-info-value">470 - Đ. Trần Đại Nghĩa - Hòa Quý - Ngũ Hành Sơn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Form liên hệ -->
+    <div class="contact-form">
+      <div class="contact-form-header">Gửi liên hệ</div>
+      <form>
+        <label for="name">Họ tên <span>*</span></label>
+        <input type="text" id="name" name="name" placeholder="Họ và tên:*" required>
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="Email:*" required>
+        <label for="message">Nội dung <span>*</span></label>
+        <textarea id="message" name="message" rows="5" placeholder="Lời nhắn" required></textarea>
+        <button type="submit" class="contact-submit-btn">Gửi liên hệ</button>
+      </form>
+    </div>
+  </div>
 </main>
 
+<!-- Footer giống main.html -->
 <footer>
   <div class="footer-container">
-    <!-- Logo and Contact Info -->
     <div class="footer-logo">
       <div class="hotline">Hotline: 0819056277</div>
       <div class="hotline-label">GIAO HÀNG NHANH</div>
@@ -100,7 +108,6 @@
       <p>MST: 01041115527</p>
       <p>Ngày thành lập: 01/04/2025</p>
     </div>
-    <!-- Giới thiệu -->
     <div class="footer-section">
       <h3>Giới Thiệu</h3>
       <a href="./pages/he-thong.html">Hệ thống cửa hàng</a><br>
@@ -109,7 +116,6 @@
       <a href="./pages/tin-tuc.html">Tin tức & sự kiện</a><br>
       <a href="./pages/tuyen-dung.html">Tuyển dụng</a>
     </div>
-    <!-- Liên hệ -->
     <div class="footer-section">
       <h3>Liên Hệ</h3>
       <a href="./pages/huong-dan-mua.html">Hướng dẫn mua hàng</a><br>
@@ -117,7 +123,6 @@
       <a href="./pages/chinh-sach-baomat.html">Chính sách bảo mật</a><br>
       <a href="./pages/dieu-khoan.html">Điều khoản và điều kiện</a>
     </div>
-    <!-- Liên kết và hỗ trợ -->
     <div class="footer-section">
       <h3>Liên Kết Với Chúng Tôi</h3>
       <div class="social-icons">

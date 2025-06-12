@@ -6,6 +6,7 @@
     <title>Câu Chuyện Thương Hiệu</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <style>
         .story-container {
             max-width: 1200px;
@@ -89,7 +90,7 @@
         <div class="header-container">
             <div class="logo">
                 <a href="../main.html">
-                    <img src="../anvat/Logo_vku-01.jpg" alt="Logo Đồ ăn vặt">
+                    <img src="../anvat/ecofood-logo-template.png" style="width:80px; height:80px;" alt="Logo Đồ ăn vặt">
                 </a>
             </div>
             <nav class="nav">
@@ -108,12 +109,18 @@
                     </div>
                 </div>
                 <a href="../about.html" class="nav-link">Giới thiệu</a>
+                <a href="../lienhe.html" class="nav-link">Liên hệ</a>
             </nav>
             <div class="header-actions">
                 <a href="../Cart.html" class="cart-btn" title="Giỏ hàng">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
                 <a href="../login.html" class="login-btn">Đăng Nhập</a>
+
+                <a href="../ThanhToan.html" class="thanhtoan-btn" title="Thanh Toán ">
+        <i class="fa-regular fa-credit-card fa-xl" style="color: #000000;"></i>
+      </a>
+      
             </div>
         </div>
     </header>
@@ -164,44 +171,50 @@
     </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="../anvat/ecofood-logo-template.png" alt="Logo Đồ ăn vặt">
-                <div class="hotline">Hotline: 0819056277</div>
-                <div class="hotline-label">GIAO HÀNG NHANH</div>
-                <p>Cửa hàng Đồ Ăn Vặt Ngon</p>
-                <p>Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng</p>
-                <p>SĐT: +84 ***************</p>
-                <p>MST: 01041115527</p>
-                <p>Ngày thành lập: 01/04/2025</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Giới Thiệu</h3>
-                <a href="he-thong.html">Hệ thống cửa hàng</a><br>
-                <a href="cau-chuyen.html">Câu chuyện thương hiệu</a><br>
-                <a href="uu-dai.html">Ưu đãi thành viên</a><br>
-                <a href="tin-tuc.html">Tin tức & sự kiện</a><br>
-                <a href="tuyen-dung.html">Tuyển dụng</a>
-            </div>
-
-            <div class="footer-section">
-                <h3>Liên Hệ</h3>
-                <a href="huong-dan-mua.html">Hướng dẫn mua hàng</a><br>
-                <a href="chinh-sach-giao.html">Chính sách giao hàng</a><br>
-                <a href="chinh-sach-baomat.html">Chính sách bảo mật</a><br>
-                <a href="dieu-khoan.html">Điều khoản và điều kiện</a>
-            </div>
-
-            <div class="footer-section">
-                <h3>Liên Kết Với Chúng Tôi</h3>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank">🟦</a>
-                    <a href="https://instagram.com" target="_blank">📷</a>
-                    <a href="https://youtube.com" target="_blank">▶️</a>
-                </div>
-            </div>
+    <div class="footer-container">
+        <!-- Logo and Contact Info -->
+        <div class="footer-logo">
+            <div class="hotline">Hotline: 0819056277</div>
+            <div class="hotline-label">GIAO HÀNG NHANH</div>
+            <p>Cửa hàng Đồ Ăn Vặt Ngon</p>
+            <p>Trường Đại học Công nghệ Thông tin và Truyền thông Việt - Hàn, Đại học Đà Nẵng</p>
+            <p>SĐT: +84 ***************</p>
+            <p>MST: 01041115527</p>
+            <p>Ngày thành lập: 01/04/2025</p>
         </div>
-    </footer>
+        <!-- Giới thiệu -->
+        <div class="footer-section">
+            <h3>Giới Thiệu</h3>
+            <a href="he-thong.html">Hệ thống cửa hàng</a><br>
+            <a href="cau-chuyen.html">Câu chuyện thương hiệu</a><br>
+            <a href="uu-dai.html">Ưu đãi thành viên</a><br>
+            <a href="tin-tuc.html">Tin tức & sự kiện</a><br>
+            <a href="tuyen-dung.html">Tuyển dụng</a>
+        </div>
+        <!-- Liên hệ -->
+        <div class="footer-section">
+            <h3>Liên Hệ</h3>
+            <a href="huong-dan-mua.html">Hướng dẫn mua hàng</a><br>
+            <a href="chinh-sach-giao.html">Chính sách giao hàng</a><br>
+            <a href="chinh-sach-baomat.html">Chính sách bảo mật</a><br>
+            <a href="dieu-khoan.html">Điều khoản và điều kiện</a>
+        </div>
+        <!-- Liên kết và hỗ trợ -->
+        <div class="footer-section">
+            <h3>Liên Kết Với Chúng Tôi</h3>
+            <div class="social-icons">
+                <img src="../anvat/facebook.png" style="width:32px; height:32px; object-fit:contain;" alt="Facebook" />
+                <img src="../anvat/tiktok.png" style="width:32px; height:32px; object-fit:contain;" alt="Tiktok" />
+                <img src="../anvat/instagram.png" style="width:32px; height:32px; object-fit:contain;" alt="Instagram" />
+            </div>
+            <div class="certification">
+                <img src="../anvat/bocongthuong.png" style="width:100px; height:50px; object-fit:contain;" alt="Đã thông báo Bộ Công Thương">
+            </div>
+            <h3>Tổng Đài Hỗ Trợ</h3>
+            <p>Đặt hàng: ********** (9:30 – 21:30)</p>
+            <p>Tổng đài CSKH: ********** (9:30 – 21:30)</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
