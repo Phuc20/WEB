@@ -25,15 +25,12 @@
       <div class="nav-products">
         <span class="nav-link nav-products-title">Sản phẩm <i class="fas fa-chevron-down"></i></span>
         <div class="nav-products-dropdown">
-          <a href="#" data-target="banh-trang-tac">Bánh tráng tắc</a>
-          <a href="#" data-target="banh-trang-bo">Bánh tráng bơ</a>
-          <a href="#" data-target="banh-trang-xi-ke">Bánh tráng xì ke</a>
+          <a href="#" data-target="banh-trang">Bánh tráng</a>
           <a href="#" data-target="com-chay">Cơm cháy</a>
-          <a href="#" data-target="com-chay-khoquet">Cơm cháy kho quẹt</a>
-          <a href="#" data-target="com-chay-mohanh">Cơm cháy mỡ hành</a>
-          <a href="#" data-target="keo">Kẹo trái cây</a>
-          <a href="#" data-target="keo-chupa">Kẹo Chupa chups</a>
-          <a href="#" data-target="chan-ga">Chân gà Bà Tuyết</a>
+          <a href="#" data-target="keo">Kẹo</a>
+          <a href="#" data-target="snack">Snack</a>
+          <a href="#" data-target="chan-ga">Chân gà</a>
+          
         </div>
       </div>
       <a href="about.html" class="nav-link">Giới thiệu</a>
@@ -341,9 +338,11 @@
 
     "Chân gà Bà Tuyết": "Chân gà Bà Tuyết – món ăn vặt không thể thiếu trong những buổi tụ tập bạn bè. Vị cay nồng của ớt, vị mặn mà của nước chấm, tất cả hòa quyện tạo nên một trải nghiệm ẩm thực khó quên. Mỗi miếng chân gà đều mang theo hương vị của tình bạn, của những kỷ niệm đẹp đẽ bên nhau.",
 
+    "Snack rong biển": "Snack rong biển – món ăn vặt nhẹ nhàng nhưng đầy hương vị biển cả. Vị giòn tan của rong biển kết hợp với muối biển tự nhiên, mang đến cảm giác thanh mát và dễ chịu. Đây là lựa chọn hoàn hảo cho những ai yêu thích sự đơn giản nhưng tinh tế trong từng miếng ăn.",
+
     "Snack khoai tây Lay's": "Snack khoai tây Lay's, với vị giòn tan và hương vị đậm đà, là món ăn vặt không thể thiếu trong những buổi tụ tập bạn bè. Mỗi miếng snack là một trải nghiệm thú vị, từ vị giòn tan đến hương vị đậm đà, tất cả hòa quyện tạo nên một món ăn vặt hoàn hảo."
 
-    "Snack rong biển": "Snack rong biển, với vị giòn tan và hương vị tự nhiên, là món ăn vặt lý tưởng cho những ai yêu thích sự mới lạ. Mỗi miếng snack mang đến cảm giác tươi mát, nhẹ nhàng, như một làn gió biển thổi qua tâm hồn. Đây là món ăn vặt hoàn hảo cho những buổi xem phim hay thư giãn cuối tuần.",
+    
   };
 
   orderButtons.forEach(button => {
@@ -399,6 +398,14 @@
         // Cuộn tới sản phẩm (nếu muốn)
         targetItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
+    }
+    // Lọc sản phẩm theo category trên URL
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    if (category) {
+      // Giả sử bạn có hàm filterProducts(category, searchText)
+      filterProducts(category, '');
+      // Nếu có nút filter, có thể active nút tương ứng nếu muốn
     }
   });
 
