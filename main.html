@@ -9,42 +9,39 @@
 </head>
 <body>
 <header class="header">
-  <div class="header-container" style="display: flex; align-items: center; gap: 20px; padding: 10px 20px;">
-
+  <div class="header-container">
     <!-- Logo -->
-    <div class="logo" style="flex-shrink: 0;">
+    <div class="logo">
       <a href="main.html">
-        <img src="../anvat/Logo_vku-01.jpg" alt="Logo Đồ ăn vặt" style="height: 50px;">
+        <img src="../anvat/Logo_vku-01.jpg" alt="Logo Đồ ăn vặt">
       </a>
     </div>
-
-    <!-- Menu -->
-    <nav class="nav" style="
-      background: #ffeb66;
-      border-radius: 25px;
-      padding: 10px 30px;
-      display: flex;
-      gap: 40px;
-      flex-grow: 1;
-      justify-content: center;
-      font-weight: 500;
-      font-size: 16px;
-    ">
-      <a href="#" data-target="banh-trang-tac" style="color: #333; text-decoration: none; padding: 8px 12px; border-radius: 15px; transition: background-color 0.3s;">Bánh tráng tắc</a>
-      <a href="#" data-target="banh-trang-bo" style="color: #333; text-decoration: none; padding: 8px 12px; border-radius: 15px; transition: background-color 0.3s;">Bánh tráng bơ</a>
-      <a href="#" data-target="banh-trang-xi-ke" style="color: #333; text-decoration: none; padding: 8px 12px; border-radius: 15px; transition: background-color 0.3s;">Bánh tráng xì ke</a>
-      <a href="#" data-target="com-chay" style="color: #333; text-decoration: none; padding: 8px 12px; border-radius: 15px; transition: background-color 0.3s;">Cơm cháy</a>
-      <a href="#" data-target="keo" style="color: #333; text-decoration: none; padding: 8px 12px; border-radius: 15px; transition: background-color 0.3s;">Kẹo các loại</a>
-      <a href="#" data-target="moc-khoa" style="color: #333; text-decoration: none; padding: 8px 12px; border-radius: 15px; transition: background-color 0.3s;">Móc khóa</a>
+    <!-- Danh mục -->
+    <nav class="nav">
+      <a href="main.html" class="nav-link">Trang chủ</a>
+      <div class="nav-products">
+        <span class="nav-link nav-products-title">Sản phẩm <i class="fas fa-chevron-down"></i></span>
+        <div class="nav-products-dropdown">
+          <a href="#" data-target="banh-trang-tac">Bánh tráng tắc</a>
+          <a href="#" data-target="banh-trang-bo">Bánh tráng bơ</a>
+          <a href="#" data-target="banh-trang-xi-ke">Bánh tráng xì ke</a>
+          <a href="#" data-target="com-chay">Cơm cháy</a>
+          <a href="#" data-target="com-chay-khoquet">Cơm cháy kho quẹt</a>
+          <a href="#" data-target="com-chay-mohanh">Cơm cháy mỡ hành</a>
+          <a href="#" data-target="keo">Kẹo trái cây</a>
+          <a href="#" data-target="keo-chupa">Kẹo Chupa chups</a>
+          <a href="#" data-target="moc-khoa">Móc khóa lá cờ</a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">Giới thiệu</a>
     </nav>
-
-    <a href="Cart.html" class="cart-btn" title="Giỏ hàng" style="font-size: 28px; color: var(--primary-color); margin: 0 20px;">
-      <i class="fas fa-shopping-cart"></i>
-    </a>
-
-    <a href="login.html" class="login-btn" style="padding: 10px 20px; background: #ffeb66; border-radius: 25px; border: 1px solid #f0c419; text-decoration: none; color: #333;">
-      Đăng Nhập
-    </a>
+    <!-- Icon giỏ hàng & đăng nhập -->
+    <div class="header-actions">
+      <a href="Cart.html" class="cart-btn" title="Giỏ hàng">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <a href="login.html" class="login-btn">Đăng Nhập</a>
+    </div>
   </div>
 </header>
 
@@ -201,69 +198,28 @@
 
 
 <script>
+  // Lọc sản phẩm khi click menu
   const menuLinks = document.querySelectorAll('.nav a');
   const menuItems = document.querySelectorAll('.menu-item');
 
   menuLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault(); // Ngăn hành động mặc định của thẻ <a>
-
       const target = this.getAttribute('data-target');
-
-      // Ẩn hết tất cả menu-item
-      menuItems.forEach(item => {
-        item.style.display = 'none';
-      });
-
-      // Hiện những menu-item có id chứa target (ví dụ: "banh-trang-tac", "banh-trang-bo", ...)
-      menuItems.forEach(item => {
-        if(item.id.includes(target)) {
-          item.style.display = 'block';
-        }
-      });
+      if (target) {
+        e.preventDefault();
+        menuItems.forEach(item => {
+          item.style.display = item.id.includes(target) ? 'block' : 'none';
+        });
+      }
+      // Nếu không có data-target (ví dụ Trang chủ, Giới thiệu), để mặc định cho chuyển trang
     });
   });
+
+  // Modal sản phẩm
   const orderButtons = document.querySelectorAll('.order-btn');
   const modal = document.getElementById('productModal');
   const closeModalBtn = document.getElementById('closeModal');
-
-  orderButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      const menuItem = button.closest('.menu-item');
-      const title = menuItem.querySelector('.menu-item-title').innerText;
-      const price = menuItem.querySelector('.menu-item-price').innerText;
-      const bgImage = menuItem.querySelector('.menu-item-img').style.backgroundImage;
-
-      // Set thông tin vào modal
-      document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalPrice').innerText = price;
-      document.getElementById('modalDesc').innerText = productDescriptions[title] || "Chưa có mô tả cho sản phẩm này.";
-
-      // Lấy url hình ảnh từ background-image css
-      const matches = bgImage.match(/url\(["']?(.+?)["']?\)/);
-      const imageUrl = matches ? matches[1] : '';
-      document.getElementById('modalImg').src = imageUrl;
-
-      // Hiển thị modal
-      modal.style.display = 'flex';
-    });
-  });
-
-
-  // Đóng modal
-  closeModalBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  // Ngoài ra có thể đóng modal khi click ngoài nội dung
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
   const productDescriptions = {
-
     "Bánh tráng tắc": "Từng miếng bánh tráng mềm mại như tờ lụa, thấm đẫm hương tắc chua thanh dịu nhẹ. Sa tế cay cay thoảng qua như một cái chạm khẽ nơi đầu lưỡi, hành phi vàng óng gợi nhắc những chiều tan trường lộng gió. Cắn một miếng, hương vị lan tỏa, như thể cả mùa hè bỗng chốc ùa về – rực nắng, đậm tình, ngọt ngào và rất đỗi thân quen.",
 
     "Bánh tráng bơ": "Giòn rụm từng lớp bánh, vàng ươm như nắng chiều trên mái ngói cũ. Bơ thơm béo quyện cùng ruốc, sa tế, hành phi – tất cả tạo nên một bản hòa âm của tuổi thơ và ký ức. Bánh tráng bơ không chỉ là món ăn, mà là hương vị của những ngày xưa hồn nhiên, ngồi bên nhau cười khúc khích vì một miếng bơ nhiều hơn bạn.",
@@ -274,45 +230,73 @@
 
     "Cơm cháy kho quẹt": "Giòn tan cơm cháy, đậm đà kho quẹt – sự kết hợp không thể hoàn hảo hơn của một món ăn 'nhà quê' nhưng đầy tinh tế. Kho quẹt sánh mịn, thoang thoảng mùi tiêu, mùi tỏi – gợi nhắc căn bếp xưa và những bữa cơm chiều mẹ đứng bếp. Ăn một miếng, như được ôm trọn quê hương vào lòng.",
 
-    "Cơm cháy mỡ hành": "Chỉ là cơm cháy thôi mà, khi ta  mỡ hành vừa rưới lên, hành phi thơm lừng, bỗng chốc hóa thành một tác phẩm. Mỗi miếng ăn là một lần cảm xúc trỗi dậy – béo mà không ngấy, giòn mà không khô, như ký ức về một miền quê giản đơn mà khó quên .",
+    "Cơm cháy mỡ hành": "Chỉ là cơm cháy thôi mà, nhưng khi mỡ hành vừa rưới lên, hành phi thơm lừng, bỗng chốc hóa thành một tác phẩm. Mỗi miếng ăn là một lần cảm xúc trỗi dậy – béo mà không ngấy, giòn mà không khô, như ký ức về một miền quê giản dị mà khó quên.",
 
     "Kẹo trái cây": "Những viên kẹo nhỏ xinh, rực rỡ sắc màu như cầu vồng sau mưa, mang trong mình hương vị của trái cây mùa hè. Ngọt nhẹ, mát dịu, tan dần trên đầu lưỡi như một cái ôm ấm áp từ ký ức. Ăn một viên, là cả tuổi thơ như ùa về – tinh nghịch, vui tươi và rộn ràng tiếng cười.",
 
     "Kẹo Chupa chups": "Chiếc kẹo que nhỏ nhắn – món quà không chỉ ngọt ngào mà còn mang cả một vùng trời ký ức. Hương vị dâu, nho, cola... thay nhau đan xen như những mảng màu tuổi thơ. Tay cầm que kẹo, miệng nhai vui vẻ – chẳng cần điều gì quá lớn lao, chỉ thế thôi cũng đủ làm nên một ngày đáng nhớ.",
 
     "Móc khóa lá cờ": "Nhỏ bé mà kiêu hãnh, móc khóa lá cờ mang theo trong mình niềm tự hào âm thầm mà sâu sắc. Không chỉ là vật trang trí, đó là biểu tượng – là nét chấm phá đậm đà của tình yêu quê hương nơi những món đồ thường nhật. Treo trên balo, lủng lẳng nơi chìa khóa – nhưng trái tim thì luôn rạo rực vì gốc gác mình mang theo."
-
-
   };
-  const addToCartBtn = document.getElementById('addToCartBtn');
 
+  orderButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const menuItem = button.closest('.menu-item');
+      const title = menuItem.querySelector('.menu-item-title').innerText;
+      const price = menuItem.querySelector('.menu-item-price').innerText;
+      const bgImage = menuItem.querySelector('.menu-item-img').style.backgroundImage;
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalPrice').innerText = price;
+      document.getElementById('modalDesc').innerText = productDescriptions[title] || "Chưa có mô tả cho sản phẩm này.";
+      const matches = bgImage.match(/url\(["']?(.+?)["']?\)/);
+      const imageUrl = matches ? matches[1] : '';
+      document.getElementById('modalImg').src = imageUrl;
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Thêm vào giỏ hàng
+  const addToCartBtn = document.getElementById('addToCartBtn');
   addToCartBtn.addEventListener('click', () => {
     const title = document.getElementById('modalTitle').innerText;
     const price = document.getElementById('modalPrice').innerText;
     const imageUrl = document.getElementById('modalImg').src;
-
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
     cart.push({ title, price, quantity: 1, image: imageUrl });
-
     localStorage.setItem('cart', JSON.stringify(cart));
-
     alert(`Đã thêm "${title}" vào giỏ hàng!`);
   });
-
-  const navLinks = document.querySelectorAll('.nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      link.style.backgroundColor = '#f7d94c';
-      link.style.color = '#222';
-      link.style.fontWeight = '600';
-    });
-    link.addEventListener('mouseleave', () => {
-      link.style.backgroundColor = 'transparent';
-      link.style.color = '#333';
-      link.style.fontWeight = '500';
-    });
+  
+  // Xử lý khi vào main.html#id_san_pham từ trang khác
+  window.addEventListener('DOMContentLoaded', function() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      // Ẩn tất cả sản phẩm
+      menuItems.forEach(item => {
+        item.style.display = 'none';
+      });
+      // Hiện sản phẩm có id trùng với hash
+      const targetItem = document.getElementById(hash);
+      if (targetItem) {
+        targetItem.style.display = 'block';
+        // Cuộn tới sản phẩm (nếu muốn)
+        targetItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
   });
 </script>
+
+
+
 </body>
 </html>
