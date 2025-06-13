@@ -233,10 +233,10 @@ body {
 
 .filter-btn {
     padding: 10px 20px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #FFEB66;
     border-radius: 25px;
     background: transparent;
-    color: #4CAF50;
+    color: #6b5600;
     font-size: 1em;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -244,8 +244,8 @@ body {
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: #4CAF50;
-    color: white;
+    background: #FFEB66;
+    color: #6b5600;
 }
 
 .search-bar {
