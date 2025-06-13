@@ -24,7 +24,7 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 th {
-  background-color: #ef4b3c;
+  background-color: #ff1e1e;
   color: white;
   font-weight: 600;
 }
@@ -37,16 +37,16 @@ img {
 }
 button {
   cursor: pointer;
-  background-color: #ef4b3c;
+  background-color: #f73927;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 6px 12px;
   border-radius: 6px;
   font-weight: 600;
   transition: background-color 0.3s ease;
 }
 button:hover {
-  background-color: #d43b2c;
+  background-color: #e01d0c;
 }
 .qty-btn {
   padding: 3px 10px;
